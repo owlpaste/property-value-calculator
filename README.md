@@ -1,14 +1,14 @@
 # Property value calculator
-##What is this for
+## What is this for
 Command line calculator to help work out what property value is affordable and what yearly/monthly savings are required to save for buying a property in a given number of years. 
-##Getting started
+## Getting started
 Setup the environment
 ```
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
-##Run
+## Run
 With default parameters
 ```
 python calc.py 26500
@@ -17,20 +17,20 @@ Pass in custom parameters
 ```
 python calc.py 26500 --multiplier 4 --deposit 100000
 ```
-##Notes
+## Notes
 * The table is produced for properties from 50,000 to 1,000,000.
 * Mortgage deposit is the deposit required for the mortgage.
 * Salary deposit is the deposit required to counter salary * multiplier not being enough to reach the desired deposit.
 * Savings per year is average savings per year required to reach total deposit.
 * --deposit parameter is how much deposit is available and is taken out of total deposit.
-###Example
+### Example
 ```
 # python calc.py 26500 --multiplier 4 --deposit 100000
-Deposit £100,000
+Deposit Â£100,000
 LTV %15
 Saving over 10 years
 Salary multiplier x4.0
-Salary: £26,500
+Salary: Â£26,500
 +------------------+------------+--------------------+------------------+-----------------+--------------------+---------------------+
 |   Property value |   Mortgage |   Mortgage deposit |   Salary deposit |   Total deposit |   Savings per year |   Savings per month |
 |------------------+------------+--------------------+------------------+-----------------+--------------------+---------------------|
@@ -56,5 +56,5 @@ Salary: £26,500
 |        1,000,000 |    850,000 |            150,000 |          744,000 |         794,000 |             79,400 |               6,617 |
 +------------------+------------+--------------------+------------------+-----------------+--------------------+---------------------+
 ```
-In this example, average UK salary is used, salary multiplier of x4 and a saved up deposit of £100,000. This shows that the applicant can look at properties worth a bit more then £200,000.
-Trying to get a £300,000 property would require an extra deposit of £94,000 which can be saved over 10 years, saving £783 per month.
+In this example, average UK salary is used, salary multiplier of x4 and a saved up deposit of Â£100,000. This shows that the applicant can look at properties worth a bit more then Â£200,000.
+Trying to get a Â£300,000 property would require an extra deposit of Â£94,000 which can be saved over 10 years, saving Â£783 per month.
